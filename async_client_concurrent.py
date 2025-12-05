@@ -1,5 +1,6 @@
 # async_client.py
 import asyncio
+from typing import Tuple
 
 REPLICAS = [
     ("127.0.0.1", 5000),
@@ -41,7 +42,7 @@ async def send_request_to_replica(replica, message: str) -> str:
     return data.decode().strip()
 
 
-async def send_request_with_retries(message: str, req_id: int) -> tuple[str, tuple]:
+async def send_request_with_retries(message: str, req_id: int) -> Tuple[str, tuple]:
     """
     Sends a request with retries and failover.
     Returns: (reply, replica_tuple) on success, raises RuntimeError on failure.

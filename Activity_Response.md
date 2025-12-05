@@ -34,7 +34,12 @@ python async_client_concurrent.py
 
 ### Sample Output
 
-![pic 2](image.png)
+==================================================
+PER-REPLICA STATISTICS
+==================================================
+Replica 127.0.0.1:5000 served 1 successful requests
+Replica 127.0.0.1:5001 served 5 successful requests
+Replica 127.0.0.1:5002 served 0 successful requests
 
 ### Analysis
 
